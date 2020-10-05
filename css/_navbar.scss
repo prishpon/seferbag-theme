@@ -1,0 +1,19 @@
+.left-navbar{   
+    h2.side-header{
+        background-color: $primary;
+        color:#fff;
+        padding:3.5rem 7rem;
+        font-size:2.2rem;
+    }
+    .item{
+        padding:3.5rem 7rem;
+        border:0.1rem solid $primary-light;
+        font-size:1.8rem;
+        color:$primary-light;
+    }
+    strong{
+        font-size:2.5rem;
+        color:black;
+        font-weight:500;
+    }
+}

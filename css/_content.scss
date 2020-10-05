@@ -1,0 +1,22 @@
+.main-content{
+    padding:0 6rem;
+}
+.heading{
+    min-height: 15rem;
+}
+.content-wrapper{
+    padding:10rem 0;
+}
+.content-left-header{
+    color:black;
+    font-size:3rem;
+}
+.content-right-header{
+    color:$secondary;
+    font-size:3rem;
+}
+.main-content-text{
+    color:$primary-light;
+    font-size:1.4rem;
+    padding:5rem 1rem;
+}

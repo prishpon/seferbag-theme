@@ -1,0 +1,188 @@
+.topheader {
+  padding: 4rem 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main_logo {
+  height: 50px;
+  width: 50px;
+}
+
+nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav button.navbar-toggler {
+  background-color: #cf1922;
+  border: transparent;
+}
+
+nav button.navbar-toggler:focus {
+  border: transparent;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+  font-family: "Montserrat";
+  color: #2c2d30;
+}
+
+.nav-link:hover {
+  color: #98999a;
+}
+
+ul.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.navbar-nav .nav-item {
+  padding: 0 1.4rem;
+}
+
+.logo_text {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #b90302;
+  padding-left: 0.5rem;
+}
+
+img.flag {
+  height: 18px;
+  width: 30px;
+}
+
+i {
+  font-size: 1.6rem;
+  color: #2c2d30;
+  font-weight: 300;
+}
+
+.search {
+  border-left: 0.1rem solid #98999a;
+}
+
+.banner {
+  max-height: 70rem;
+}
+
+.secondary-header {
+  background-color: #b90302;
+  padding: 1.2rem 0;
+}
+
+.secondary-header a {
+  color: #fff;
+  padding: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.secondary-header a:hover {
+  text-decoration: none;
+}
+
+.main-content {
+  padding: 0 6rem;
+}
+
+.heading {
+  min-height: 15rem;
+}
+
+.content-wrapper {
+  padding: 10rem 0;
+}
+
+.content-left-header {
+  color: black;
+  font-size: 3rem;
+}
+
+.content-right-header {
+  color: #b90302;
+  font-size: 3rem;
+}
+
+.main-content-text {
+  color: #98999a;
+  font-size: 1.4rem;
+  padding: 5rem 1rem;
+}
+
+.left-navbar h2.side-header {
+  background-color: #cf1922;
+  color: #fff;
+  padding: 3.5rem 7rem;
+  font-size: 2.2rem;
+}
+
+.left-navbar .item {
+  padding: 3.5rem 7rem;
+  border: 0.1rem solid #98999a;
+  font-size: 1.8rem;
+  color: #98999a;
+}
+
+.left-navbar strong {
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #cf1922;
+  color: white;
+  font-size: 1.4rem;
+}
+
+footer i {
+  color: white;
+}
+
+.copyright {
+  padding: 2rem 0;
+}
+
+@media (max-width: 724px) {
+  .search {
+    border-left: transparent;
+  }
+}
+
+html {
+  font-size: 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+/*# sourceMappingURL=style.css.map */
