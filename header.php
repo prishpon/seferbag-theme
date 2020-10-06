@@ -19,32 +19,22 @@
               <span class="navbar-toggler-icon navbar-dark"></span>
             </button>
                 <div class="collapse navbar-collapse flex-end justify-content-end" id="collapsibleNavbar">
+                <?php
+   wp_nav_menu(array(
+     'menu'            => 'primary',
+     'theme_location'  => 'primary',
+     'container'       => 'div',
+     'container_id'    => 'bs4navbar',
+     'container_class' => 'collapse navbar-collapse',
+     'menu_id'         => false,
+     'menu_class'      => 'navbar-nav flex-end justify-content-end',
+     'depth'           => 2,
+     'fallback_cb'     => 'bs4navwalker::fallback',
+     'walker'          => new wp_bootstrap_navwalker()
+   ));
+   ?>
                   <ul class="navbar-nav ">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Home
-                      </a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Video</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Kontakt</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Impressum</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Datenshutzenklarung</a>
-                    </li>
+                   
                     <li class="nav-item">
                       <a class="nav-link" href="#">
                         <img src="<?php bloginfo("template_directory"); ?>/img/germany-flag-icon-64.png" alt="" class="flag">
@@ -67,7 +57,7 @@
           <div class="col-md-7 m-0 p-0">
             <img class="img-fluid" src="<?php bloginfo("template_directory"); ?>/img/boat.jpg" alt=""> 
           </div>
-          <div class="col-md-5  m-0 pl-1">
+          <div class="col-md-5  m-0 p-0">
             <img class="img-fluid" src="<?php bloginfo("template_directory"); ?>/img/stones.jpg" alt=""> 
           </div>                 
       </div>
