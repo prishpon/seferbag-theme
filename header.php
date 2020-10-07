@@ -28,7 +28,7 @@
      'container_class' => 'collapse navbar-collapse',
      'menu_id'         => false,
      'menu_class'      => 'navbar-nav flex-end justify-content-end',
-     'depth'           => 2,
+     'depth'           => 0,
      'fallback_cb'     => 'bs4navwalker::fallback',
      'walker'          => new wp_bootstrap_navwalker()
    ));

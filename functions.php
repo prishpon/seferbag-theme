@@ -14,6 +14,7 @@ add_action('wp_enqueue_scripts', 'safer_bag_files');
 
 // Register Custom Navigation Walker
 
+
 class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 	/**
  * @see Walker::start_lvl()
@@ -220,7 +221,6 @@ public static function fallback( $args ) {
 	}
 }
 }
-
 
 
 add_action( 'after_setup_theme', 'theme_register_nav_menu' );
