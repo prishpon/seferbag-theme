@@ -19,21 +19,22 @@
               <span class="navbar-toggler-icon navbar-dark"></span>
             </button>
                 <div class="collapse navbar-collapse flex-end justify-content-end" id="collapsibleNavbar">
-                <?php
-   wp_nav_menu(array(
-     'menu'            => 'primary',
-     'theme_location'  => 'primary',
-     'container'       => 'div',
-     'container_id'    => 'bs4navbar',
-     'container_class' => 'collapse navbar-collapse',
-     'menu_id'         => false,
-     'menu_class'      => 'navbar-nav flex-end justify-content-end',
-     'depth'           => 0,
-     'fallback_cb'     => 'bs4navwalker::fallback',
-     'walker'          => new wp_bootstrap_navwalker()
-   ));
-   ?>
-                  <ul class="navbar-nav ">
+                <?php 
+								wp_nav_menu(array(
+									'theme_location' => 'primary',
+                  'depth'             =>  0,
+      'container'         => 'div',
+      'container_class'   => 'collapse navbar-collapse',
+      'container_id'      => 'bs-example-navbar-collapse-1',
+      'menu_class'        => 'nav navbar-nav',
+      'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+  
+									'walker'          => new wp_bootstrap_navwalker()
+									)
+								);
+							?>
+               
+                  <!-- <ul class="navbar-nav ">
                    
                     <li class="nav-item">
                       <a class="nav-link" href="#">
@@ -48,7 +49,8 @@
                     <li class="nav-item search">
                       <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                     </li>
-                  </ul>
+                  </ul> -->
+                  </div>
                 </div>
               </nav>
             </div>
