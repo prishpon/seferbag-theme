@@ -12,8 +12,9 @@
             <div class="topheader container">
               <nav class="navbar navbar-expand-md">
                 <div class="d-flex logo_container">
-                  <a href="#" class="topheader_logo"><img src="<?php bloginfo("template_directory"); ?>/img/logo.png" alt="logo" class="main_logo"></a>
-                  <div class="logo_text">SAFER BAG</div>
+                  <a href="#" class="topheader_logo">
+                  <?php  the_custom_logo();?></a>
+                  <div class="logo_text"><?php echo get_theme_mod( 'logo_title' ); ?></div>
             </div> 
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon navbar-dark"></span>
@@ -23,33 +24,23 @@
 								wp_nav_menu(array(
 									'theme_location' => 'primary',
                   'depth'             =>  0,
-      'container'         => 'div',
-      'container_class'   => 'collapse navbar-collapse',
-      'container_id'      => 'bs-example-navbar-collapse-1',
-      'menu_class'        => 'nav navbar-nav',
-      'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-  
+                  'container'         => 'nav',
+                 'container_class'   => 'collapse navbar-collapse',
+                 'container_id'      => 'bs-example-navbar-collapse-1',
+                 'menu_class'        => 'navbar-nav',
+                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 									'walker'          => new wp_bootstrap_navwalker()
 									)
 								);
 							?>
                
-                  <!-- <ul class="navbar-nav ">
-                   
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        <img src="<?php bloginfo("template_directory"); ?>/img/germany-flag-icon-64.png" alt="" class="flag">
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        <img src="<?php bloginfo("template_directory"); ?>/img/united-kingdom-flag-small.png" alt="" class="flag">
-                      </a>
-                    </li>
+                  <ul class="navbar-nav ">  
                     <li class="nav-item search">
-                      <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                      <a class="nav-link" href="#">
+                       <?php get_search_form(); ?>
+                      
                     </li>
-                  </ul> -->
+                  </ul>
                   </div>
                 </div>
               </nav>
@@ -57,24 +48,24 @@
     <div class="container-fluid banner  m-0 p-0">
       <div class="row m-0 ">
           <div class="col-md-7 m-0 p-0">
-            <img class="img-fluid" src="<?php bloginfo("template_directory"); ?>/img/boat.jpg" alt=""> 
+            <img class="img-fluid" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt=""> 
           </div>
           <div class="col-md-5  m-0 p-0">
-            <img class="img-fluid" src="<?php bloginfo("template_directory"); ?>/img/stones.jpg" alt=""> 
+            <img class="img-fluid" src="<?php echo get_theme_mod( 'header-image2' ); ?>" alt=""> 
           </div>                 
       </div>
   </div>
   <div class="secondary-header container-fluid">
-    <ul class="nav nav-pills navbar navbar-expand-md nav-justified">
-      <li class="nav-item">
-        <a class="nav-link " href="#">Vorteille/Nutzen</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Verfahren/System</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Gepackstucke</a>
-      </li>
-    </ul>
+  <?php 
+								wp_nav_menu(array(
+									'theme_location' => 'secondary',
+                  'depth'             =>  1,
+                  'container'         => 'nav',
+                 'container_class'   => 'nav nav-pills navbar navbar-expand-md d-flex justify-content-center',
+                 'container_id'      => 'bs-example-navbar-collapse-1',
+                 'menu_class'        => 'navbar-nav',
+									)
+								);
+							?>
   </div>
 </header>
