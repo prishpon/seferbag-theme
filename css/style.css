@@ -5,8 +5,9 @@
 }
 
 .main_logo {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
+  margin-top: 0.4rem;
 }
 
 nav {
@@ -32,7 +33,7 @@ nav button.navbar-toggler:focus {
 }
 
 .nav-link {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: "Montserrat";
   color: #2c2d30;
 }
@@ -52,7 +53,7 @@ ul.navbar-nav .nav-item {
 }
 
 .logo_text {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #b90302;
   padding-left: 0.5rem;
@@ -79,14 +80,14 @@ i {
 
 .secondary-header {
   background-color: #b90302;
-  padding: 1.2rem 0;
 }
 
 .secondary-header a {
   color: #fff;
   padding: 0;
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Roboto';
 }
 
 .secondary-header a:hover {
@@ -154,15 +155,35 @@ footer i {
 .copyright {
   padding: 2rem 0;
 }
-
+h1.header-title{
+  font-size: 3.5rem;
+  color: #303133;
+  font-family: 'Poppins';
+}
 @media (max-width: 724px) {
   .search {
     border-left: transparent;
   }
+  input.form-control {
+    position: absolute;
+    width: 80%;
+    right: 0;
+    background-color: white;
+    bottom: 0;
+    padding: 1.4rem;
+    left: 7%;
+  }
+  i#search-button {
+    position: absolute;
+    left: 7%;
+    bottom: -1rem;
+  }
 }
+
 
 html {
   font-size: 10px;
+  font-family: 'Roboto';
 }
 
 * {
@@ -184,5 +205,13 @@ a:focus,
 a:active {
   text-decoration: none;
   color: inherit;
+}
+.search-header{
+  background: url(https://saferbag.de/wp-content/uploads/2018/05/uncode-default-back.jpeg);
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

@@ -75,19 +75,6 @@ function theme_register_nav_menu() {
 	register_nav_menu( 'primary', 'Primary Menu' );
 	register_nav_menu( 'secondary', 'Secondary Menu' );
 }
-//logo customizations
-function saferbag_custom_logo_setup() {
-	$defaults = array(
-	'height'      => 50,
-	'width'       => 50,
-	'flex-height' => false,
-	'flex-width'  => false,
-	'header-text' => array( 'site-title', 'site-description' ),
-   'unlink-homepage-logo' => false, 
-	);
-	add_theme_support( 'custom-logo', $defaults );
-   }
-   add_action( 'after_setup_theme', 'saferbag_custom_logo_setup' );
 
 
 
@@ -138,7 +125,7 @@ add_action('widgets_init','awesome_widget_setup');
 
 
 //customizer
-function yellow_customizer_settings( $wp_customize ) {
+function saferbag_customizer_settings( $wp_customize ) {
 
 
 //header image 2
@@ -308,5 +295,26 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'slid
 
 
 }
-add_action( 'customize_register', 'yellow_customizer_settings' );
+add_action( 'customize_register', 'saferbag_customizer_settings' );
 
+
+function saferbag_custom_logo_setup() {
+	$defaults = array(
+	'height'      => 40,
+	'width'       => 40,
+	'flex-height' => true,
+	'flex-width'  => true,
+	'header-text' => array( 'site-title', 'site-description' ),
+	);
+	add_theme_support( 'custom-logo', $defaults );
+   }
+   add_action( 'after_setup_theme', 'saferbag_custom_logo_setup' );
+   
+//add search to menu
+add_filter('wp_nav_menu_items', 'add_search_form', 22, 22);
+function add_search_form($items, $args) {
+if( $args->theme_location == 'primary' )
+        $items .='<li class="nav-item search" id="search-item">
+		<a class="nav-link" href="#">' . get_search_form(false) . '</li>';
+        return $items;
+}

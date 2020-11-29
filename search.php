@@ -1,4 +1,4 @@
-<?php get_header();
+<?php get_header('search');
 ?>
 
 <div class="content-wrapper container">

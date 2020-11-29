@@ -2,4 +2,18 @@
     .search{
         border-left:transparent;
     }
+    input.form-control {
+        position: absolute;
+        width: 80%;
+        right: 0;
+        background-color: white;
+        bottom: 0;
+        padding: 1.4rem;
+        left: 7%;
+    }
+    i#search-button{
+        position: absolute;
+        left: 7%;
+        bottom: -1rem;
+    }
 }
